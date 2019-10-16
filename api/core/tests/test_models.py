@@ -9,7 +9,6 @@ class ModelTests(TestCase):
         # Arrange
         email = 'test@reecerose.com'
         password = 'Testingpassword123!'
-
         # Act
         user = get_user_model().objects.create_user(
             email=email,
@@ -23,13 +22,11 @@ class ModelTests(TestCase):
         """Test the email for a new user is normalized. Returns successful"""
         # Arrange
         email = 'test@REECEROSE.COM'
-
         # Act
         user = get_user_model().objects.create_user(
             email=email,
             password='Testingpassword123!'
         )
-
         # Assert
         self.assertEqual(user.email, email.lower())
 
@@ -42,11 +39,11 @@ class ModelTests(TestCase):
 
     def test_create_new_superuser(self):
         """Test creating a new superuser"""
-        # Arrange
+        # Arrange, Act
         user = get_user_model().objects.create_superuser(
             email='test@reecerose.com',
             password='Testingpassword123!'
         )
-
+        # Assert
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
