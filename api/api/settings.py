@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # apps
     'core',
     'user',
+    'recipe',
     # other libraries
     'rest_framework',
     'rest_framework.authtoken',
