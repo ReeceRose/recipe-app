@@ -1,5 +1,5 @@
 Django==2.2.27
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 entrypoints==0.3
 flake8==3.7.8
 mccabe==0.6.1
